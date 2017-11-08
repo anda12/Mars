@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModuleCfgXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>Test1</name>
+  <id>100</id>
+  <cls>Mars.Ut.Test1</cls>
+  <version>0.1</version>
+  <init>2</init>
+  <ipaddr>127.0.0.1</ipaddr>
+
+  <pub>
+    <point datafmt="str">
+    <name>Test1Pub1</name>
+    </point>
+  </pub>
+
+  <responses>
+    <point>
+    <name>Res1</name>
+    </point>
+  </responses>
+
+
+  <faninc>
+    <fanin>
+      <point>
+      <name>Test2.Fanins1</name>
+      </point>
+    </fanin>
+    <fanin>
+      <point>
+      <name>Test3.Test3Faninpub</name>
+      </point>
+    </fanin>
+    <fanin>
+      <point>
+      <name>Test3.Test3Fi</name>
+      </point>
+    </fanin>
+  </faninc>
+
+  <usertasks>
+    <name>UserFaninc</name>
+    <name>UserFaninPub</name>
+    <name>Fifoc</name>
+  </usertasks>
+
+  <fanouts>
+    <fanout>
+      <point>
+      <name>Fanout1</name>
+        </point>
+    </fanout>
+    <fanout>
+      <point>
+      <name>Fanout2</name>
+      </point>
+    </fanout>
+  </fanouts>
+  
+  <!--
+
+
+
+
+  <faninc>
+    <fanin>
+      <name>Test2.Test2Faninpub</name>
+    </fanin>
+  </faninc>
+  <fanouts>
+    <fanout>
+      <name>Fanout1</name>
+    </fanout>
+  </fanouts>
+  -->
+</ModuleCfgXml>

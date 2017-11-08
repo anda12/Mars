@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModuleCfgXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>Test3</name>
+  <id>100</id>
+  <version>0.1</version>
+  <cls>Mars.Ut.Test3</cls>
+  <init>4</init>
+  <ipaddr>127.0.0.1</ipaddr>
+  <depends>
+    <depend>Test2</depend>
+  </depends>
+
+  <subpubs>
+    <subpub>
+      <sub>
+        <point>
+        <name>Test1.Test1Pub1</name>
+        </point>
+      </sub>
+      <pub>
+        <point>
+        <name>Test3Pub1</name>
+        </point>
+      </pub>
+    </subpub>
+  </subpubs>
+
+  <faninpubs>
+    <faninpub>
+      <fanin>
+        <point>
+        <name>Test3Faninpub</name>
+        </point>
+      </fanin>
+      <pub>
+        <point>
+        <name>Test3Pub2</name>
+        </point>
+      </pub>
+    </faninpub>
+  </faninpubs>
+
+  <faninfanouts>
+    <faninfanout>
+      <fanin>
+        <point>
+        <name>Test3Fi</name>
+        </point>
+      </fanin>
+      <fanout>
+        <point>
+        <name>Test3Fo</name>
+        </point>
+      </fanout>
+    </faninfanout>
+  </faninfanouts>
+
+  <fanworks>
+    <fanwork>
+      <workernum>2</workernum>
+      <fanin>
+        <point>
+        <name>Test2.Fanins2</name>
+        </point>
+      </fanin>
+      <fanout>
+        <point>
+        <name>Test1.Fanout2</name>
+        </point>
+      </fanout>
+    </fanwork>
+  </fanworks>
+  
+</ModuleCfgXml>

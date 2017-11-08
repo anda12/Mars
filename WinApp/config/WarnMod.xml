@@ -1,0 +1,30 @@
+﻿<ModuleCfgXml>
+  <name>Warning</name>
+  <!-- id is the base info, usr can assign or use default, it must be multi of 100, the value smaller than is 10000 is reserved for system -->>
+  <id>10</id>
+  <cls>Mars.Warn.Warning</cls>
+	<version>0.1</version>
+	<init>2</init>
+  <ipaddr>127.0.0.1</ipaddr>
+
+  <responses>
+    <point>
+      <name>SysWarn</name>
+    </point>
+  </responses>
+
+  <faninpubs>
+    <faninpub>
+      <fanin>
+        <point>
+          <name>WarnData</name>
+        </point>
+      </fanin>
+      <pub>
+        <point>
+          <name>WarnPub</name>
+        </point>
+      </pub>
+    </faninpub>
+  </faninpubs>
+</ModuleCfgXml>

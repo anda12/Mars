@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D01F1E62-9652-461C-B043-4CCB9DAAAA8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinApp</RootNamespace>
+    <AssemblyName>WinApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AsyncIO, Version=0.1.25.0, Culture=neutral, PublicKeyToken=44a94435bd6f33f8, processorArchitecture=MSIL">
+      <HintPath>..\packages\AsyncIO.0.1.26.0\lib\net40\AsyncIO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Common\Common\bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Long5">
+      <HintPath>..\Common\Common\bin\Debug\Long5.dll</HintPath>
+    </Reference>
+    <Reference Include="Mars">
+      <HintPath>..\Mars\bin\Debug\Mars.dll</HintPath>
+    </Reference>
+    <Reference Include="NetMQ, Version=4.0.0.1, Culture=neutral, PublicKeyToken=a6decef4ddc58b3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetMQ.4.0.0.1\lib\net40\NetMQ.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\CMDModel.cs" />
+    <Compile Include="Command\CommandBR.cs" />
+    <Compile Include="Command\CommandDA.cs" />
+    <Compile Include="Command\PCMDSer.cs" />
+    <Compile Include="CommonLibrary\Adapter\BinaryModel.cs" />
+    <Compile Include="CommonLibrary\Adapter\MessageModel.cs" />
+    <Compile Include="CommonLibrary\Command\BaseStationReceiverModel.cs" />
+    <Compile Include="CommonLibrary\Command\CommandModel.cs" />
+    <Compile Include="CommonLibrary\Command\MsgConfig.cs" />
+    <Compile Include="CommonLibrary\Command\MsgReceive.cs" />
+    <Compile Include="CommonLibrary\Command\NetConfig.cs" />
+    <Compile Include="CommonLibrary\Command\PortConfig.cs" />
+    <Compile Include="CommonLibrary\Command\TimeIntervalConfig.cs" />
+    <Compile Include="CommonLibrary\Command\WarningCmd.cs" />
+    <Compile Include="CommonLibrary\Data\DataModel.cs" />
+    <Compile Include="CommonLibrary\Device\BaseStationHeartBeatModel.cs" />
+    <Compile Include="CommonLibrary\Device\BaseStationModel.cs" />
+    <Compile Include="CommonLibrary\Device\BaseStationReceiverModel.cs" />
+    <Compile Include="CommonLibrary\Device\CardModel.cs" />
+    <Compile Include="CommonLibrary\Device\CardPowerModel.cs" />
+    <Compile Include="CommonLibrary\Device\ReceiverHeartBeatModel.cs" />
+    <Compile Include="CommonLibrary\Device\ReceiverModel.cs" />
+    <Compile Include="CommonLibrary\Human\BasicDataItemModel.cs" />
+    <Compile Include="CommonLibrary\Human\BasicDataModel.cs" />
+    <Compile Include="CommonLibrary\Human\DepartmentModel.cs" />
+    <Compile Include="CommonLibrary\Human\EmployeeCardModel.cs" />
+    <Compile Include="CommonLibrary\Human\EmployeeModel.cs" />
+    <Compile Include="CommonLibrary\Human\UserModel.cs" />
+    <Compile Include="CommonLibrary\Location\LocationModel.cs" />
+    <Compile Include="CommonLibrary\Location\LocationWarningModel.cs" />
+    <Compile Include="CommonLibrary\Location\RecordModel.cs" />
+    <Compile Include="CommonLibrary\Location\RegionModel.cs" />
+    <Compile Include="CommonLibrary\Location\RegionReceiverModel.cs" />
+    <Compile Include="CommonLibrary\Location\RegionRecordModel.cs" />
+    <Compile Include="CommonLibrary\MethodName.cs" />
+    <Compile Include="CommonLibrary\Protocol\ReceiverParameterModel.cs" />
+    <Compile Include="CommonLibrary\Request.cs" />
+    <Compile Include="CommonLibrary\Response.cs" />
+    <Compile Include="CommonLibrary\Subscriber.cs" />
+    <Compile Include="CommonLibrary\Warning\WarningMessageModel.cs" />
+    <Compile Include="CommonLibrary\Warning\WarningModel.cs" />
+    <Compile Include="CommonLibrary\Warning\WarningType.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Human\HumanBR.cs" />
+    <Compile Include="Human\HumanDA.cs" />
+    <Compile Include="Human\PResService.cs" />
+    <Compile Include="hw\DevGlobal.cs" />
+    <Compile Include="hw\Device.cs" />
+    <Compile Include="hw\DeviceDA.cs" />
+    <Compile Include="hw\DevModel.cs" />
+    <Compile Include="hw\Message.cs" />
+    <Compile Include="hw\PDevFaninPub.cs" />
+    <Compile Include="hw\PDevHeartBeat.cs" />
+    <Compile Include="hw\PdevService.cs" />
+    <Compile Include="hw\xyp\ComData.cs" />
+    <Compile Include="hw\xyp\DataFmt.cs" />
+    <Compile Include="hw\xyp\PDevDistribute.cs" />
+    <Compile Include="hw\xyp\PHbTask.cs" />
+    <Compile Include="hw\xyp\PXypCmd.cs" />
+    <Compile Include="hw\xyp\PxypPub.cs" />
+    <Compile Include="hw\xyp\XypAdapt.cs" />
+    <Compile Include="hw\xyp\XypParse.cs" />
+    <Compile Include="hw\zl\DataHelper.cs" />
+    <Compile Include="hw\zl\PFiFo.cs" />
+    <Compile Include="hw\zl\PFiPub.cs" />
+    <Compile Include="hw\zl\PFWork.cs" />
+    <Compile Include="hw\zl\PSocket.cs" />
+    <Compile Include="hw\zl\TcpReceiver.cs" />
+    <Compile Include="hw\zl\Zladapt.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="warn\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\DeviceMod.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\HumanMod.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\CMDMod.xml" />
+    <Content Include="config\Test\Land\Test1Mod.xml" />
+    <Content Include="config\Test\Land\Test2Mod.xml" />
+    <Content Include="config\Test\Land\Test3Mod.xml" />
+    <Content Include="config\WarnMod.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\WarnMo-d.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\XypAdaptMod.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\ZLAdaptMod.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

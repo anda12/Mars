@@ -1,0 +1,149 @@
+﻿<ModuleCfgXml>
+  <name>Warning</name>
+  <!-- id is the base info, usr can assign or use default, it must be multi of 100, the value smaller than is 10000 is reserved for system -->>
+  <id>10</id>
+  <cls>FrameWork.Frame.Warning</cls>
+	<version>0.1</version>
+	<init>1</init>
+  <ipaddr>127.0.0.1</ipaddr>
+	<depends>
+    <depend></depend>
+  </depends>
+
+  <subs>
+    <sub>
+      <point>
+      <name>abc</name>
+        </point>
+    </sub>
+  </subs>
+
+  <pub>
+    <point>
+    <name>ABC</name>
+    </point>
+  </pub>
+
+  <subpubs>
+    <subpub>
+      <sub>
+        <point>
+        <name>bcd</name>
+        </point>
+      </sub>
+      <pub>
+        <point>
+        <name>BCD</name>
+        </point>
+      </pub>
+    </subpub>
+  </subpubs>
+  
+  <requests>
+    <request>
+      <point>
+      <name></name>
+      </point>
+    </request>
+  </requests>
+
+  <responses>
+    <point>
+    <name>ABC</name>
+    </point>
+  </responses>
+
+  <fanins>
+    <fanin>
+      <point>
+      <name></name>
+      </point>
+    </fanin>
+  </fanins>
+
+  <faninc>
+    <fanin>
+      <point>
+      <name></name>
+      </point>
+    </fanin>
+  </faninc>
+
+  <faninpubs>
+    <faninpub>
+      <fanin>
+        <point>
+        <name></name>
+        </point>
+      </fanin>
+      <pub>
+        <point>
+        <name></name>
+        </point>
+      </pub>
+    </faninpub>
+  </faninpubs>
+    
+  <fanouts>
+    <fanout>
+      <point>
+      <name></name>
+      </point>
+    </fanout>
+  </fanouts>
+
+  <fanoutc>
+    <fanout>
+      <point>
+      <name></name>
+      </point>
+    </fanout>
+  </fanoutc>
+  <!--
+  <fanworks>
+    <fanwork>
+      <workers>1</workers>
+      <fanout>
+        <name></name>
+      </fanout>
+      <fanin>
+        <name></name>
+      </fanin>
+    </fanwork>
+  </fanworks>
+-->
+  <faninfanouts>
+    <faninfanout>
+      <fanin>
+        <point>
+        <name></name>
+        </point>
+      </fanin>
+      <fanout>
+        <point>
+          <name></name>
+        </point>
+      </fanout>
+    </faninfanout>
+  </faninfanouts>
+  
+  <fanworks>
+    <fanwork>
+      <workernum></workernum>
+      <fanin>
+        <point>
+          <name></name>
+        </point>
+      </fanin>
+      <fanout>
+        <point>
+          <name></name>
+        </point>
+      </fanout>
+    </fanwork>
+  </fanworks>
+
+  <usertasks>
+      <name></name>
+  </usertasks>
+</ModuleCfgXml>

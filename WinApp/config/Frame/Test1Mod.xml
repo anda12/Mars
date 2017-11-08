@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModuleCfgXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>Test1</name>
+  <id>100</id>
+  <cls>FrameWork.Ut.Test1</cls>
+  <version>0.1</version>
+  <init>2</init>
+  <ipaddr>127.0.0.1</ipaddr>
+
+  <pub>
+    <name>Test1Pub1</name>
+  </pub>
+
+  <responses>
+    <name>Res1</name>
+  </responses>
+
+
+  <faninc>
+    <fanin>
+      <name>Test2.Fanins1</name>
+    </fanin>
+    <fanin>
+      <name>Test3.Test3Faninpub</name>
+    </fanin>
+  </faninc>
+
+  <usertasks>
+    <name>UserFaninc</name>
+    <name>UserFaninPub</name>
+  </usertasks>
+
+  <fanouts>
+    <fanout>
+      <name>Fanout1</name>
+    </fanout>
+  </fanouts>
+  
+  <!--
+
+
+
+
+  <faninc>
+    <fanin>
+      <name>Test2.Test2Faninpub</name>
+    </fanin>
+  </faninc>
+  <fanouts>
+    <fanout>
+      <name>Fanout1</name>
+    </fanout>
+  </fanouts>
+  -->
+</ModuleCfgXml>

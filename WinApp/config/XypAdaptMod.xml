@@ -1,0 +1,61 @@
+﻿<ModuleCfgXml>
+  <name>XypAdapt</name>
+  <!-- id is the base info, usr can assign or use default, it must be multi of 100, the value smaller than is 10000 is reserved for system -->>
+  <!-- name of the class, libname+namespace+classname -->
+  <cls>WinApp.hw.xyp.XypAdapt</cls>
+  <version>0.1</version>
+  <init>4</init>
+  <ipaddr>127.0.0.1</ipaddr>
+
+ <requests>
+    <request>
+      <point>
+        <name>Device.DevService</name>
+      </point>
+    </request>
+  </requests>
+    
+  <fanouts>
+    <fanout>
+      <point>
+        <name>XypDis</name>
+      </point>
+    </fanout>
+  </fanouts>
+
+  <fanworks>
+    <fanwork>
+      <workernum>1</workernum>
+      <fanin>
+        <point>
+          <name>Device.HwData</name>
+        </point>
+      </fanin>
+      <fanout>
+        <point>
+          <name>XypAdapt.XypDis</name>
+        </point>
+      </fanout>
+    </fanwork>
+  </fanworks>
+
+
+  <usertasks>
+    <name>XYPHB</name>
+  </usertasks>
+
+  <faninc>
+    <fanin>
+      <point>
+        <name>Device.HwData</name>
+      </point>
+    </fanin>
+  </faninc>
+
+  <responses>
+    <point>
+      <name>XypCmd</name>
+    </point>
+  </responses>
+
+</ModuleCfgXml>

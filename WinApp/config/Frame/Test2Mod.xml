@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModuleCfgXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>Test2</name>
+  <id>100</id>
+  <version>0.1</version>
+  <cls>FrameWork.Ut.Test2</cls>
+  <init>5</init>
+  <ipaddr>127.0.0.1</ipaddr>
+  <depends>
+    <depend>Test1</depend>
+  </depends>
+  <subs>
+    <sub>
+      <name>Test1.Test1Pub1</name>
+    </sub>
+    <sub>
+      <name>Test3.Test3Pub1</name>
+    </sub>
+    <sub>
+      <name>Test3.Test3Pub2</name>
+    </sub>
+  </subs>
+
+  <requests>
+    <request>
+      <name>Test1.Res1</name>
+    </request>
+  </requests>
+
+  <usertasks>
+    <name>Usert</name>
+    <name>FanoutC</name>
+  </usertasks>
+
+  <fanins>
+    <fanin>
+      <name>Fanins1</name>
+    </fanin>
+  </fanins>
+
+  <fanoutc>
+    <fanout>
+      <name>Test1.Fanout1</name>
+    </fanout>
+  </fanoutc>
+
+  <!--
+
+
+
+  <faninc>
+    <fanin>
+      <name>Test1.Fanins1</name>
+    </fanin>
+    <fanin>
+      <name>Test1.Fanins2</name>
+    </fanin>
+  </faninc>
+  <faninpubs>
+    <faninpub>
+      <fanin>
+        <name>Test2Faninpub</name>
+      </fanin>
+      <pub>
+        <name>Test2Pub3</name>
+      </pub>
+    </faninpub>
+  </faninpubs>
+
+  -->
+</ModuleCfgXml>
