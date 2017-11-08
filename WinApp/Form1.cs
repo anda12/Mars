@@ -10,9 +10,7 @@ using System.Windows.Forms;
 using Long5;
 using Mars.Land;
 using System.Configuration;
-using WinApp.hw;
-using WinApp.Human;
-using WinApp.Command;
+
 
 namespace WinApp
 {
@@ -26,23 +24,13 @@ namespace WinApp
         private string dingweidb;
             
 
-        private int SetDBConnectStr()
-        {
-            devicedb = ConfigurationManager.ConnectionStrings["device1"].ConnectionString;
-            humandb = ConfigurationManager.ConnectionStrings["human"].ConnectionString;
-            dingweidb = ConfigurationManager.ConnectionStrings["dingwei"].ConnectionString;
-            DeviceDA.SetConStr(devicedb);
-            HumanDA.SetConStr(humandb);
-            CommandDA.SetConStr(dingweidb);
-            return 0;
-        }
+
 
         public Form1()
         {
 
             InitializeComponent();
             Logging.setConfig();
-            SetDBConnectStr();
             //cfgpath = ConfigurationManager.AppSettings["LocalHost"];
 
         }
